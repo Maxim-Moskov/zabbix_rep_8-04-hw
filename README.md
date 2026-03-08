@@ -23,6 +23,8 @@
 **Выполнение:**
 Был написан Bash-скрипт, принимающий аргументы на вход. В конфигурационный файл Zabbix-агента (`zabbix_agentd.conf`) добавлен параметр `UserParameter` для вызова этого скрипта сервером. В веб-интерфейсе (в созданном ранее шаблоне) добавлены два элемента данных с ключами `custom.script[1]` и `custom.script[2]` и типом информации `Character`.
 
+![Задание 6](img/task_6_1.png)
+
 **Код Bash-скрипта (`/etc/zabbix/scripts/my_script.sh`):**
 ```bash
 #!/bin/bash
@@ -32,6 +34,7 @@ elif [ "$1" == "2" ]; then
     date "+%Y-%m-%d"
 else
     echo "Unknown parameter"
-fi
+fi 
 
-![Задание 6](img/task_6_1.png)
+
+
